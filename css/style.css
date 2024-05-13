@@ -1,0 +1,117 @@
+@import url("../css/andy-bell-reset.css");
+@font-face {
+    font-family: jetbrains-mono;
+    src: url(../assets/fonts/variable/JetBrainsMono[wght].ttf),
+         url(../assets/fonts/variable/JetBrainsMono-Italic[wght].ttf);
+}
+
+:root {
+    /* PRIMARY COLORS */
+    --clr-red: hsl(11, 100%, 38%);
+
+    /* NEUTRAL COLORS */
+    --clr-neutral-900: hsl(240, 18%, 4%);
+    --clr-neutral-800: hsl(235, 20%, 21%);
+    --clr-neutral-200: hsl(240, 63%, 91%);
+    --clr-neutral-100: hsl(240, 100%, 99%);
+
+    /* FONT */
+    --ff-special: jetbrains-mono, system-ui, sans-seirf;
+    --ff-global: system-ui, sans-seirf;
+
+    /* FONT SIZE */
+    --fs-100: .75rem;
+    --fs-200: .875rem;
+    --fs-300: 1rem;
+    --fs-400: 1.125rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.75rem;
+    --fs-800: 2rem;
+    --fs-900: 2.5rem;
+
+    /* MISC */
+    --size-main-border: 2rem;
+}
+
+
+html {
+    color-scheme: dark;
+}
+
+body {
+    position: relative;
+    color: var(--clr-neutral-100);
+    font-size: var(--fs-400);
+    font-family: var(--ff-global);
+}
+
+.primary-header {
+    position: absolute;
+    width: 100dvw;
+    height: 100dvh;
+    padding: var(--size-main-border);
+    background-color: var(--clr-neutral-800);
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100dvh - calc(var(--size-main-border) * 2));
+    width: calc(100dvw - calc(var(--size-main-border) * 2));
+    border: 1px solid white;
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin-left: var(--size-main-border);
+}
+
+.special-text {
+    color: var(--clr-red);
+    font-size: var(--fs-300);
+    font-family: var(--ff-special);
+}
+
+.primary-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.primary-nav-list {
+    font-family: var(--ff-special);
+    font-weight: 100;
+    font-size: clamp(var(--fs-600), 4vw, var(--fs-900));
+
+    & li::marker {
+        content: '01. ';
+    }
+
+    & li:nth-child(2)::marker {
+        content: '02. ';
+    }
+
+    & li:nth-child(3)::marker {
+        content: '03. ';
+    }
+
+    & li:nth-child(4)::marker {
+        content: '04. ';
+    }
+}
+
+/* UTILITY CLASSES */
+
+.flex-row {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
