@@ -1,6 +1,8 @@
 const aboutMe = document.querySelector("#about-me");
 const goBack = document.querySelector("#go-back");
 const headerClipPath = document.querySelector(".primary-header");
+const menuButton = document.querySelector("#menu");
+
 
 aboutMe.addEventListener('click', () => {
     headerClipPath.classList.replace("clip-path-animation-reverse", "clip-path-animation");
@@ -9,3 +11,4 @@ aboutMe.addEventListener('click', () => {
 goBack.addEventListener('click', () => {
     headerClipPath.classList.replace("clip-path-animation", "clip-path-animation-reverse");
 })
+
