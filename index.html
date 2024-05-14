@@ -24,8 +24,12 @@
             </div>
             <nav class="primary-nav">
                 <ol class="primary-nav-list">
-                    <li><button id="about-me">About Me</button></li>
-                    <li>test</li>
+                    <li>
+                        <button id="about-me">About Me</button>
+                    </li>
+                    <li>
+                        <button>My Work</button>
+                    </li>
                     <li>test</li>
                     <li>test</li>
                 </ul>
@@ -35,13 +39,18 @@
     </header>
 
     <main>
-        <section class="about-me">
-            <div>
+        <section class="about-me-container">
+            <div class="main-content-wrapper flex-column">
                 <h2>About Me</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum molestias quaerat iste voluptatum beatae labore nisi est, esse repellat non voluptate eligendi, neque quae dicta perspiciatis soluta doloremque tempore totam?</p>
+                <div class="fixed">
+                    <div class="button-container flex-row space-between">
+                        <button class="main-button" id="go-back">&#x2190; Home</button>
+                        <button class="main-button" id="menu">Menu</button>
+                    </div>
+                </div>
             </div>
         </section>
-        <button id="go-back">goBack</button>
     </main>
 </body>
 </html>
