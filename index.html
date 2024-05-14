@@ -4,38 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="script/script.js"></script>
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/svg">
+    <script src="script/script.js" defer></script>
     <title>Portfolio</title>
 </head>
 <body>
-    <header class="primary-header">
+    <header class="primary-header clip-path-animation-reverse">
+        <div class="radio-button-test">
+            <label for="theme">Dark</label>
+            <input type="radio" name="theme" id="dark">
+            <input type="radio" name="theme" id="light">
+            <label for="theme">Light</label>
+        </div>
         <div class="content-wrapper">
             <div class="intro-text">
                 <p class="special-text">Hi, welcome to my portfolio</p>
-                <h1>My name is Daniel Solheim</h1>
+                <h1>My name is Daniel</h1>
                 <p>I have been doing web development for around 3 months now</p>
             </div>
             <nav class="primary-nav">
                 <ol class="primary-nav-list">
-                    <li><button>About Me</button></li>
+                    <li><button id="about-me">About Me</button></li>
                     <li>test</li>
                     <li>test</li>
                     <li>test</li>
                 </ul>
             </nav>
         </div>
+        <div class="copyright">&#169; 2024</div>
     </header>
 
     <main>
-        <div class="about-me">
-            <div class="content-wrapper">
-                <div class="text">
-                    <h2>About Me</h2>
-                </div>
+        <section class="about-me">
+            <div>
+                <h2>About Me</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum molestias quaerat iste voluptatum beatae labore nisi est, esse repellat non voluptate eligendi, neque quae dicta perspiciatis soluta doloremque tempore totam?</p>
             </div>
-        </div>
+        </section>
+        <button id="go-back">goBack</button>
     </main>
-
-    <div class="clip-path-test"></div>
 </body>
 </html>

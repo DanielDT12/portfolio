@@ -47,11 +47,22 @@ body {
 }
 
 .primary-header {
-    position: absolute;
+    position: fixed;
     width: 100dvw;
     height: 100dvh;
     padding: var(--size-main-border);
     background-color: var(--clr-neutral-800);
+}
+
+.radio-button-test {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: var(--ff-special);
+    font-size: var(--fs-300);
+    margin-top: .3rem;
+    margin-right: 2rem;
+    color: var(--clr-red);
 }
 
 .content-wrapper {
@@ -104,6 +115,18 @@ body {
     }
 }
 
+.copyright {
+    margin-top: .5rem;
+    color: var(--clr-red);
+    font-size: var(--fs-300);
+    font-family: var(--ff-special);
+    line-height: 1;
+}
+
+.test-long-text {
+    max-width: 10rem;
+}
+
 /* UTILITY CLASSES */
 
 .flex-row {
@@ -115,3 +138,31 @@ body {
     flex-direction: column;
 }
 
+/* CLIP PATH FOR PAGE TRANSITION, APPLY CLASS TO ELEMENT WITH JAVASCRIPT */
+.clip-path-animation {
+    animation: clip-path-anim .3s cubic-bezier(0.94, 0.04, 0.95, 1.14) forwards;
+}
+
+.clip-path-animation-reverse {
+    animation: clip-path-anim-reverse .3s cubic-bezier(0.94, 0.04, 0.95, 1.14) forwards;
+}
+
+@keyframes clip-path-anim {
+    from {
+        clip-path: inset(0 0 0 0);
+    }
+
+    to {
+        clip-path: inset(0 0 0 100%);
+    }
+}
+
+@keyframes clip-path-anim-reverse {
+    from {
+        clip-path: inset(0 0 0 100%);
+    }
+
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
