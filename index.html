@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-color-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <header class="primary-header clip-path-animation-reverse">
+    <header class="primary-header">
         <div class="radio-button-test">
             <label for="theme">Dark</label>
             <input type="radio" name="theme" id="dark">
@@ -20,7 +20,7 @@
             <div class="intro-text">
                 <p class="special-text">Hi, welcome to my portfolio</p>
                 <h1>My name is Daniel</h1>
-                <p>I have been doing web development for around 3 months now</p>
+                <p>I have been doing web development for 3 months now.</p>
             </div>
             <nav class="primary-nav">
                 <ol class="primary-nav-list">
@@ -30,25 +30,39 @@
                     <li>
                         <button>My Work</button>
                     </li>
-                    <li>test</li>
-                    <li>test</li>
+                    <li>
+                        <button id="contact-btn">Contact</button>
+                    </li>
                 </ul>
             </nav>
         </div>
         <div class="copyright">&#169; 2024</div>
     </header>
 
-    <main>
-        <section class="about-me-container">
-            <div class="main-content-wrapper flex-column">
-                <h2>About Me</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum molestias quaerat iste voluptatum beatae labore nisi est, esse repellat non voluptate eligendi, neque quae dicta perspiciatis soluta doloremque tempore totam?</p>
-                <div class="fixed">
-                    <div class="button-container flex-row space-between">
-                        <button class="main-button" id="go-back">&#x2190; Home</button>
-                        <button class="main-button" id="menu">Menu</button>
-                    </div>
+    <main class="main-content">
+        <section class="about-me section">
+            <div class="about-me-info flow">
+                <h2 class="about-me-title">About Me</h2>
+                <p>My name is Daniel and recently i have been working on becoming a web developer</p>
+                <div class="current-skills">
+                    <ul class="current-skills-list">
+                        <img src="./assets/images/svg-icons/html-icon.svg" alt="HTML">
+                        <img src="./assets/images/svg-icons/css-icon.svg" alt="CSS">
+                        <img src="./assets/images/svg-icons/js-icon.svg" alt="Javascript">
+                    </ul>    
                 </div>
+            </div>
+        </section>
+
+        <section class="my-work section">
+            <div class="my-work-info flow">
+                <h2 class="my-work-title">My work</h2>
+                <p>Here are some projects i have worked on</p>
+            </div>
+            <div class="previous-projects-grid">
+                <div class="project-cell"></div>
+                <div class="project-cell"></div>
+                <div class="project-cell"></div>
             </div>
         </section>
     </main>
