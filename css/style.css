@@ -154,11 +154,21 @@ h1, h2, h3, h4, h5, h6 {
     font-size: var(--fs-300);
     margin-top: .3rem;
     margin-right: 2rem;
-    color: var(--clr-pink);
+    color: var(--clr-purple);
 }
 
 input[type="radio"] {
-    background-color: red;
+    appearance: none;
+    -webkit-appearance: none;
+    width: .75rem;
+    height: .75rem;
+    border: 1px solid var(--clr-text-heading);
+    transition: background-color 300ms ease;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked {
+    background-color: var(--clr-purple);
 }
 
 .content-wrapper {
