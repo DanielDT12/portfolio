@@ -207,15 +207,40 @@ input[type="radio"]:checked {
 
     & li::marker {
         content: '01. ';
+        color: var(--clr-blue);
     }
 
     & li:nth-child(2)::marker {
         content: '02. ';
+        color: var(--clr-pink);
     }
 
     & li:nth-child(3)::marker {
         content: '03. ';
+        color: var(--clr-yellow);
     }
+}
+
+.header-a-tag {
+    color: var(--clr-text-heading);
+    text-decoration: none;
+    font-weight: 100;
+}
+
+.header-a-tag:is(:hover, :focus-visible) {
+    text-decoration: underline;
+}
+
+#contact-btn {
+    border: none;
+    color: var(--clr-text-heading);
+    background-color: transparent;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+#contact-btn:is(:hover, :focus-visible) {
+    text-decoration: underline;
 }
 
 .form-wrapper {
