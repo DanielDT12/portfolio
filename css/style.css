@@ -184,7 +184,12 @@ input[type="radio"]:checked {
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
+    max-width: 50ch;
     margin-left: var(--size-main-border);
+}
+
+.github-logo {
+    max-width: 2rem;
 }
 
 .special-text {
