@@ -1,14 +1,12 @@
-const aboutMe = document.querySelector("#about-me");
+const contactBtn = document.querySelector("#contact-btn");
 const goBack = document.querySelector("#go-back");
-const headerClipPath = document.querySelector(".primary-header");
-const menuButton = document.querySelector("#menu");
+const formClipPath = document.querySelector(".form-wrapper");
 
 
-aboutMe.addEventListener('click', () => {
-    headerClipPath.classList.replace("clip-path-animation-reverse", "clip-path-animation");
+contactBtn.addEventListener('click', () => {
+    formClipPath.classList.replace("clip-path-animation", "clip-path-animation-reverse");
 })
 
 goBack.addEventListener('click', () => {
-    headerClipPath.classList.replace("clip-path-animation", "clip-path-animation-reverse");
+    formClipPath.classList.replace("clip-path-animation-reverse", "clip-path-animation");
 })
-
