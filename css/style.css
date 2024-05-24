@@ -58,6 +58,7 @@
 
     /* MISC */
     --size-main-border: 2rem;
+    --padding-wrapper: 2rem;
 }
 
 /* COLOR THEME MEDIA QUERY */
@@ -179,17 +180,32 @@ input[type="radio"]:checked {
     border: 1px solid var(--clr-text-heading);
 }
 
+.header-test {
+    width: 74rem;
+    margin-inline: auto;
+    padding-inline: var(--padding-wrapper);
+}
+
 .intro-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
     max-width: 50ch;
-    margin-left: var(--size-main-border);
 }
 
-.github-logo {
-    max-width: 2rem;
+.github-link {
+    width: fit-content;
+}
+
+.github-svg {
+    fill: var(--clr-text-regular);
+    transition: all 300ms ease;
+}
+
+.github-svg:hover {
+    fill: var(--clr-rose);
+    transform: translateY(-5px);
 }
 
 .special-text {
@@ -202,7 +218,6 @@ input[type="radio"]:checked {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-right: 2rem;
 }
 
 .primary-nav-list {
@@ -333,12 +348,17 @@ input[type="radio"]:checked {
     display: grid;
     grid-template-columns: 
         minmax(1rem, 1fr) 
-        min(100% - 2rem, 70rem) 
+        min(100% - 2rem, 74rem) 
         minmax(1rem, 1fr);
 }
 
 .about-me {
     grid-column-start: 2;
+    padding-inline: 2rem;
+}
+
+.about-me-info {
+    max-width: 50ch;
 }
 
 .about-me-title {
@@ -346,12 +366,8 @@ input[type="radio"]:checked {
     font-size: clamp(var(--fs-700), 6vw, var(--fs-900));
 }
 
-.current-skills {
-    display: flex;
-}
-
 .current-skills-list {
-    display: flex;
+    border: 1px solid red;
 
     & img {
         max-width: 5rem;
@@ -360,6 +376,7 @@ input[type="radio"]:checked {
 
 .my-work {
     grid-column-start: 2;
+    padding-inline: 2rem;
 }
 
 .my-work-title {
@@ -393,7 +410,6 @@ input[type="radio"]:checked {
 }
 
 .space-between {
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -404,6 +420,16 @@ input[type="radio"]:checked {
 .flow > * + * {
     margin-block-start: var(--flow-space, 1rem);
 }
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
 
 /* CLIP PATH FOR PAGE TRANSITION, APPLY CLASS TO ELEMENT WITH JAVASCRIPT */
 .clip-path-animation {
