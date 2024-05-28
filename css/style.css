@@ -150,6 +150,7 @@ body::after {
     background-color: var(--clr-text-heading);
     z-index: 20;
     margin-left: var(--size-main-border);
+    margin-bottom: var(--size-main-border);
     scale: 1 0;
     animation: vertical-scroll linear;
     animation-timeline: view(-70px 700px);
@@ -239,7 +240,7 @@ input[type="radio"]:checked {
     }
 }
 
-.header-test {
+.header-content {
     width: 74rem;
     margin-inline: auto;
     padding-inline: var(--padding-wrapper);
@@ -445,15 +446,17 @@ input[type="radio"]:checked {
 .previous-projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
 }
 
-.project-cell {
-    width: 20rem;
-    height: 20rem;
-    border: 1px solid red;
-    background-image: url(../assets/images/svg-icons/folder-svg.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.project-card {
+    border: 1px solid white;
+}
+
+.primary-footer {
+    margin-inline: var(--size-main-border);
+    border-top: 1px solid var(--clr-text-heading);
+    padding: calc(var(--size-main-border) / 2);
 }
 
 /* UTILITY CLASSES */
