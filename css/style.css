@@ -525,6 +525,15 @@ input[type="radio"]:checked {
     padding: calc(var(--size-main-border) / 2);
 }
 
+.footer-nav {
+    align-items: center;
+    font-family: var(--ff-special);
+
+    > p {
+        font-size: var(--fs-300);
+    }
+}
+
 /* UTILITY CLASSES */
 
 .flex-row {
