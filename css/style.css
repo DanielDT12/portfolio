@@ -458,6 +458,15 @@ input[type="radio"]:checked {
     }
 }
 
+.card-img {
+    transition: all 300ms ease;
+}
+
+.card-img:hover {
+    scale: 2;
+    box-shadow: 0 0 5rem black;
+}
+
 .project-card-title {
     font-family: var(--ff-special);
     text-shadow: 1px 1px 1px var(--clr-light-blue);
@@ -510,6 +519,7 @@ input[type="radio"]:checked {
 }
 
 .primary-footer {
+    height: 10rem;
     margin-inline: var(--size-main-border);
     border-top: 1px solid var(--clr-text-heading);
     padding: calc(var(--size-main-border) / 2);
