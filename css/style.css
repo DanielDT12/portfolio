@@ -319,7 +319,7 @@ input[type="radio"]:checked {
 .primary-nav-list {
     font-family: var(--ff-special);
     font-weight: var(--fw-xt-thin);
-    font-size: clamp(var(--fs-700), 6vw, var(--fs-900));
+    font-size: clamp(var(--fs-700), 9vw, var(--fs-900));
 
     & li::marker {
         content: '01. ';
@@ -340,6 +340,12 @@ input[type="radio"]:checked {
 @media screen and (max-width: 768px) {
     .primary-nav-list {
         margin-left: 6rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .primary-nav-list {
+        margin-left: 5rem;
     }
 }
 
@@ -489,6 +495,12 @@ input[type="radio"]:checked {
     padding-inline: 2rem;
 }
 
+@media screen and (max-width: 768px) {
+    .my-work {
+        padding-inline: 1rem;
+    }
+}
+
 .my-work-title {
     color: var(--clr-light-blue);
     font-size: clamp(var(--fs-700), 6vw, var(--fs-900));
@@ -594,19 +606,19 @@ input[type="radio"]:checked {
     padding: calc(var(--size-main-border) / 2);
 }
 
-.footer-nav {
-    justify-content: space-between;
+.footer-content {
+    align-items: center;
     font-family: var(--ff-special);
 }
 
 .special-text-footer {
-    font-size: var(--fs-200);
     color: var(--clr-pink);
+    font-size: clamp(var(--fs-100), 3vw, var(--fs-200));
 }
 
 .copyright {
-    display: flex;
-    flex-direction: column;
+    --flow-space: .5rem;
+    width: 100%;
     margin-top: .5rem;
     color: var(--clr-light-blue);
     font-size: var(--fs-300);
@@ -626,6 +638,15 @@ input[type="radio"]:checked {
 .footer-return-link:is(:hover, :focus-visible) {
     color: var(--clr-pink);
     transform: translateY(-5px);
+}
+
+.github-footer-link {
+    color: var(--clr-text-heading);
+    text-decoration: none;
+}
+
+.github-footer-link:is(:hover, :focus-visible) {
+    text-decoration: underline;
 }
 
 /* UTILITY CLASSES */
