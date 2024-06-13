@@ -143,7 +143,7 @@
 
 
 html {
-    color-scheme: dark;
+    color-scheme: dark light;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -376,7 +376,7 @@ input[type="radio"]:checked {
     inset: 0;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--clr-text-heading);
+    border-bottom: 1px solid var(--clr-text-heading);
     background-color: var(--clr-bg-2);
 }
 
@@ -482,12 +482,57 @@ input[type="radio"]:checked {
     font-size: clamp(var(--fs-700), 6vw, var(--fs-900));
 }
 
-.current-skills-list {
-    border: 1px solid red;
+.about-me-keyboard-img-container {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    max-width: 35rem;
+}
 
-    & img {
+.about-me-keyboard-img-container::before,
+.about-me-keyboard-img-container::after {
+    content: '';
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    margin: -1rem;
+    transition: all 250ms ease;
+}
+
+.about-me-keyboard-img-container::before {
+    border-top: 1px solid var(--clr-text-heading);
+    border-left: 1px solid var(--clr-text-heading);
+}
+
+.about-me-keyboard-img-container::after {
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid var(--clr-text-heading);
+    border-right: 1px solid var(--clr-text-heading);
+}
+
+.about-me-keyboard-img-container:hover::before,
+.about-me-keyboard-img-container:hover::after {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.current-skills-list {
+    list-style: none;
+    border: 1px solid white;
+
+    & img, svg {
         max-width: 5rem;
+        height: fit-content;
     }
+}
+
+.current-skills-svg-icon {
+    fill: var(--clr-text-heading);
+}
+
+.javascript-svg-test {
+    filter: invert(91%) sepia(3%) saturate(1193%) hue-rotate(204deg) brightness(93%) contrast(106%);
 }
 
 .my-work {
@@ -688,7 +733,6 @@ input[type="radio"]:checked {
 }
 
 .clip-path-animation-reverse {
-    display: flex;
     animation: clip-path-anim-reverse .3s cubic-bezier(0.94, 0.04, 0.95, 1.14) forwards;
     z-index: 10;
 }
@@ -701,17 +745,19 @@ input[type="radio"]:checked {
     }
 
     to {
-        clip-path: inset(0 0 0 100%);
         display: none;
+        clip-path: inset(0 0 0 100%);
     }
 }
 
 @keyframes clip-path-anim-reverse {
     from {
+        display: none;
         clip-path: inset(0 0 0 100%);
     }
 
     to {
+        display: flex;
         clip-path: inset(0 0 0 0);
     }
 }
